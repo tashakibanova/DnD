@@ -16,7 +16,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "create-dist": "mkdir dist"
   },
   "devDependencies": {
     "eslint": "^9.5.0"
