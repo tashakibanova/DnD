@@ -16,7 +16,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
-    "lint": "./node_modules/.bin/eslint . --ext .js --ext .jsx"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "eslint": "^9.5.0"
