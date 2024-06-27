@@ -14,8 +14,11 @@
     "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
-      "build": "webpack",
-      "start": "webpack serve --open",
-      "lint": "./node_modules/.bin/eslint . --ext .js --ext .jsx"
-    }
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "lint": "./node_modules/.bin/eslint . --ext .js --ext .jsx"
+  },
+  "devDependencies": {
+    "eslint": "^9.5.0"
+  }
 }
