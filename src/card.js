@@ -1,3 +1,5 @@
+import { createBoard, saveBoard, loadBoard } from './board';
+
 const createCard = (text = '') => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -7,6 +9,8 @@ const createCard = (text = '') => {
     cardInput.classList.add('card-input');
     cardInput.value = text;
   
+    card.appendChild(cardInput);
+  
     const deleteButton = document.createElement('span');
     deleteButton.classList.add('delete-button');
     deleteButton.textContent = '\u274C';
@@ -15,7 +19,6 @@ const createCard = (text = '') => {
       saveBoard();
     });
   
-    card.appendChild(cardInput);
     card.appendChild(deleteButton);
   
     cardInput.addEventListener('input', () => {
@@ -33,18 +36,13 @@ const createCard = (text = '') => {
   
     return card;
   };
-  
-  
-  
-  
-const moveCard = (card, newParent) => {
+    
+  const moveCard = (card, newParent) => {
     const oldParent = card.parentElement;
     newParent.appendChild(card);
     if (oldParent !== newParent) {
       saveBoard();
     }
-};
+  };
   
-  
-
   export { createCard, moveCard }; 

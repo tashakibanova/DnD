@@ -50,43 +50,26 @@ const createBoard = () => {
     loadBoard(board);
     return board;
   };
-  
-  
-
+    
   const saveBoard = () => {
-    const boardData = [];
-    const columns = document.querySelectorAll('.column');
-    columns.forEach((column, index) => {
-      const columnData = {
-        index,
-        cards: [],
-      };
-      const cards = column.querySelectorAll('.card');
-      cards.forEach((card) => {
-        const cardData = {
-          text: card.querySelector('.card-input').value,
-        };
-        columnData.cards.push(cardData);
+    const columns = Array.from(document.querySelectorAll('.column')).map((column) => {
+      return Array.from(column.children).filter((child) => child.classList.contains('card')).map((card) => {
+        const cardInput = card.querySelector('.card-input');
+        return cardInput ? cardInput.value : '';
       });
-      boardData.push(columnData);
     });
-    localStorage.setItem('board', JSON.stringify(boardData));
+    localStorage.setItem('board', JSON.stringify(columns));
   };
-  
-
-const loadBoard = (board) => {
-    const boardData = JSON.parse(localStorage.getItem('board'));
-    if (boardData) {
-      boardData.forEach((columnData) => {
-        const column = board.children[columnData.index];
-        columnData.cards.forEach((cardData) => {
-          const card = createCard(cardData.text);
-          column.insertBefore(card, column.lastElementChild);
-        });
+    
+  const loadBoard = (board) => {
+    const columns = JSON.parse(localStorage.getItem('board')) || [[], [], []];
+    columns.forEach((column, index) => {
+      const columnElement = board.children[index];
+      column.forEach((cardText) => {
+        const card = createCard(cardText);
+        columnElement.insertBefore(card, columnElement.lastElementChild);
       });
-    }
+    });
   };
   
-  
-
 export { createBoard, saveBoard, loadBoard };
