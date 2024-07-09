@@ -2,7 +2,6 @@ dist
 doc
 
 e2e.server.js
-.appveyor.yml
 
 # Logs
 logs
