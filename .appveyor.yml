@@ -22,10 +22,12 @@ test_script:
 artifacts:
 - path: artifacts\ * .nupkg
 
-after_build:
-  - git config --global user.email "ov.nattie@gmail.com"
-  - git config --global user.name "tashakibanova"
-  - npm run build
-  - git add -A
-  - git commit -m "Deploy to GitHub Pages"
-  - git push origin gh-pages
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: UofPzrpOvB0/sk+/X1jalnFboit3ApgibpefBa8DKLk9I+CdbHc1Ec/L/h6G3cZb
+  on:
+    branch: main  
+  skip_cleanup: true
+  true: dist
+  target_branch: gh-pages
