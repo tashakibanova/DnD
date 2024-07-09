@@ -20,7 +20,7 @@ test_script:
   - npm run lint  # скрипт тестирования
 
 deploy:
-  provider: GitHub
+  provider: Pages
   repo: tashakibanova/DnD # Замените на ваш GitHub username и имя репозитория
   branch: gh-pages # Публикуем в ветку gh-pages
   folder: dist # Указываем папку, которую нужно опубликовать
