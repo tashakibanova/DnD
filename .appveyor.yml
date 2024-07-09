@@ -25,7 +25,7 @@ deploy:
   branch: gh-pages # Публикуем в ветку gh-pages
   folder: dist # Указываем папку, которую нужно опубликовать
   auth_token:
-    secure: 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 # Добавьте защищенный токен доступа к GitHub (см. ниже)
+    secure: UofPzrpOvB0/sk+/X1jalnFboit3ApgibpefBa8DKLk9I+CdbHc1Ec/L/h6G3cZb # Добавьте защищенный токен доступа к GitHub (см. ниже)
     draft: false
     prerelease: false
   on:
