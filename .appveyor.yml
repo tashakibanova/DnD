@@ -19,6 +19,9 @@ build_script:
 test_script:
   - npm run lint  # скрипт тестирования
 
+artifacts:
+- path: artifacts\ * .nupkg
+
 deploy:
   provider: Pages
   repo: tashakibanova/DnD # Замените на ваш GitHub username и имя репозитория
