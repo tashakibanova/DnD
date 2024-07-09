@@ -24,7 +24,7 @@ deploy:
   repo: tashakibanova/DnD # Замените на ваш GitHub username и имя репозитория
   branch: gh-pages # Публикуем в ветку gh-pages
   folder: dist # Указываем папку, которую нужно опубликовать
-  auth_token:
+  github_token:
     secure: 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 # Добавьте защищенный токен доступа к GitHub (см. ниже)
   on:
     branch: main # Публикуем только при успешной сборке ветки master
