@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
+    "appveyor": "^0.4.0",
     "eslint": "^9.5.0",
     "mini-css-extract-plugin": "^2.9.0"
   }
