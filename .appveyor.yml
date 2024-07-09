@@ -24,7 +24,7 @@ artifacts:
 
 deploy:
   provider: GitHub
-  repo: tashakibanova/DnD # Замените на ваш GitHub username и имя репозитория
+  repo: "https://github.com/tashakibanova/DnD.git" # Замените на ваш GitHub username и имя репозитория
   branch: gh-pages # Публикуем в ветку gh-pages
   folder: dist # Указываем папку, которую нужно опубликовать
   auth_token:
