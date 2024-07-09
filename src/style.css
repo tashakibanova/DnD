@@ -10,6 +10,21 @@
     border-radius: 5px;
     padding: 10px;
     width: 300px;
+    height: auto;
+    flex: 1;
+    overflow-y: auto;
+    transition: height 0.3s;
+    position: relative;
+    padding-top: 30px;
+  }
+
+  .column button {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    z-index: 10; 
   }
   
   .card {
@@ -22,6 +37,8 @@
     border-radius: 5px;
     cursor: grabbing;
     position: relative;
+    height: auto;
+    z-index: 5;
   }
   
   .card-input {
@@ -45,3 +62,7 @@
     right: 5px;
     cursor: pointer;
   }
+
+  .delete-button {
+    visibility: hidden;
+}
