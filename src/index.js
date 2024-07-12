@@ -1,7 +1,3 @@
-import './style.css';
-import { createBoard } from './board';
+import './css/style.css';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const board = createBoard();
-  document.getElementById('app').appendChild(board);
-});
+import './js/app';
