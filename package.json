@@ -17,7 +17,8 @@
     "build": "webpack",
     "start": "webpack serve --open",
     "lint": "eslint .",
-    "create-dist": "mkdir dist"
+    "create-dist": "mkdir dist",
+    "test": "echo \"No tests\""
   },
   "devDependencies": {
     "@babel/cli": "^7.24.7",
